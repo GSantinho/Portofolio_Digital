@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -13,15 +12,18 @@
     <!-- HEADER / HERO -->
     <header class="hero">
         <h1>Gustavo Santos</h1>
-        <p>Estudante de Informatica | Site Developer</p>
+        <p>Estudante de Informática | Site Developer</p>
+
+        <!-- BOTÃO PARA MODO CLARO / ESCURO -->
+        <button id="theme-toggle">🌙 Modo Escuro</button>
     </header>
 
     <!-- SOBRE MIM -->
     <section id="sobre">
         <h2>Sobre Mim</h2>
         <p>
-            Ola, sou o Gustavo, tenho 17 anos e estou a desenvolver competencias
-            em programacao.
+            Olá, sou o Gustavo, tenho 17 anos e estou a desenvolver competências
+            em programação.
         </p>
     </section>
 
@@ -29,21 +31,10 @@
     <section id="skills">
         <h2>Skills</h2>
 
-        <div class="skill">
-            <span>HTML</span>
-        </div>
-
-        <div class="skill">
-            <span>CSS</span>
-        </div>
-
-        <div class="skill">
-            <span>C#</span>
-        </div>
-
-        <div class="skill">
-            <span>Python</span>
-        </div>
+        <div class="skill"><span>HTML</span></div>
+        <div class="skill"><span>CSS</span></div>
+        <div class="skill"><span>C#</span></div>
+        <div class="skill"><span>Python</span></div>
     </section>
 
     <!-- PROJETOS -->
@@ -54,41 +45,29 @@
 
             <div class="card">
                 <img src="img/galeria obras de arte.png" alt="Gestão de uma Galeria de Obras de Arte">
-                <h3>Projeto de Gestão para Galeria de Arte em Linha da Comandos</h3>
-                <p>Este programa foi desenvolvido para a linha de comandos
-                    serve para gerir uma Galeria de Obras de Arte, 
-                    tem um sistema de guardar as obras de arte num ficheiro, 
-                    registar as obras de arte, e visionar as obras.
+                <h3>Gestão de Galeria de Arte</h3>
+                <p>
+                    Aplicação de linha de comandos para gerir uma galeria de arte,
+                    com registo e armazenamento de obras em ficheiro.
                 </p>
                 <a href="https://github.com/GSantinho/App_Galeria_Arte" target="_blank">Ver Projeto</a>
             </div>
 
             <div class="card">
                 <img src="img/print sistemas conversao.png" alt="APP Conversões">
-                <h3>Sistema de Conversão de medidas</h3>
-                <p>Este programa foi desenvolvido para a linha de comandos
-                    e tem vários tipos de Conversão:
-                    de Moedas, de Distâncias, de Pesos e de Medidas Digitais.
+                <h3>Sistema de Conversão</h3>
+                <p>
+                    Conversões de moedas, distâncias, pesos e medidas digitais
+                    em linha de comandos.
                 </p>
                 <a href="https://github.com/GSantinho/App-Converter-Medidas" target="_blank">Ver Projeto</a>
             </div>
 
             <div class="card">
                 <img src="img/quatro em linha.png" alt="Quatro em Linha">
-                <h3>Jogo Quatro em linha</h3>
-                <p>Este programa foi desenvolvido para a linha de Comandos
-                    tem o jogo do Quatro em Linha implementado e um
-                    sistema de ranking implementado.
-                </p>
-                <a href="https://github.com/GSantinho/Quatro_em_Linha" target="_blank">Ver Projeto</a>
-            </div>
-
-            <div class="card">
-                <img src="img/quatro em linha.png" alt="Quatro em Linha">
-                <h3>Jogo Quatro em linha</h3>
-                <p>Este programa foi desenvolvido para a linha de Comandos
-                    tem o jogo do Quatro em Linha implementado e um
-                    sistema de ranking implementado.
+                <h3>Jogo Quatro em Linha</h3>
+                <p>
+                    Implementação do jogo Quatro em Linha com sistema de ranking.
                 </p>
                 <a href="https://github.com/GSantinho/Quatro_em_Linha" target="_blank">Ver Projeto</a>
             </div>
@@ -101,9 +80,9 @@
         <h2>Entre em Contacto</h2>
 
         <form>
-            <input type="text" name="nome" placeholder="Nome" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Mensagem" required></textarea>
             <button type="submit">Submeter</button>
         </form>
     </section>
@@ -112,6 +91,9 @@
     <footer>
         <p>© 2025 Gustavo Santos</p>
     </footer>
+
+    <!-- SCRIPT PARA TROCAR O TEMA -->
+    <script src="theme.js"></script>
 
 </body>
 </html>

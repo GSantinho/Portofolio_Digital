@@ -14,7 +14,7 @@
         <h1>Gustavo Santos</h1>
         <p>Estudante de Informática | Site Developer</p>
 
-        <!-- BOTÃO PARA MODO CLARO / ESCURO -->
+        <!-- BOTÃO MODO CLARO / ESCURO -->
         <button id="theme-toggle">🌙 Modo Escuro</button>
     </header>
 
@@ -37,54 +37,67 @@
         <div class="skill"><span>Python</span></div>
     </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos">
-        <h2>Projetos</h2>
+    <!-- PROJETOS --> 
+    <section id="projetos"> 
+        <h2>Projetos</h2> 
+        <div class="cards"> 
+            <div class="card"> 
+                <img src="img/galeria obras de arte.png" alt="Gestão de uma Galeria de Obras de Arte"> 
+                <h3>Gestão de Galeria de Arte</h3> 
+                <p> Aplicação de linha de comandos para gerir uma galeria de arte, com registo e armazenamento de obras em ficheiro. </p> 
+                <a href="https://github.com/GSantinho/App_Galeria_Arte" target="_blank">Ver Projeto</a> 
+            </div> 
 
-        <div class="cards">
+            <div class="card"> 
+                <img src="img/print sistemas conversao.png" alt="APP Conversões"> 
+                <h3>Sistema de Conversão</h3> 
+                <p> Conversões de moedas, distâncias, pesos e medidas digitais em linha de comandos. </p> 
+                <a href="https://github.com/GSantinho/App-Converter-Medidas" target="_blank">Ver Projeto</a> 
+            </div> 
 
-            <div class="card">
-                <img src="img/galeria obras de arte.png" alt="Gestão de uma Galeria de Obras de Arte">
-                <h3>Gestão de Galeria de Arte</h3>
-                <p>
-                    Aplicação de linha de comandos para gerir uma galeria de arte,
-                    com registo e armazenamento de obras em ficheiro.
-                </p>
-                <a href="https://github.com/GSantinho/App_Galeria_Arte" target="_blank">Ver Projeto</a>
-            </div>
-
-            <div class="card">
-                <img src="img/print sistemas conversao.png" alt="APP Conversões">
-                <h3>Sistema de Conversão</h3>
-                <p>
-                    Conversões de moedas, distâncias, pesos e medidas digitais
-                    em linha de comandos.
-                </p>
-                <a href="https://github.com/GSantinho/App-Converter-Medidas" target="_blank">Ver Projeto</a>
-            </div>
-
-            <div class="card">
-                <img src="img/quatro em linha.png" alt="Quatro em Linha">
-                <h3>Jogo Quatro em Linha</h3>
-                <p>
-                    Implementação do jogo Quatro em Linha com sistema de ranking.
-                </p>
-                <a href="https://github.com/GSantinho/Quatro_em_Linha" target="_blank">Ver Projeto</a>
-            </div>
-
-        </div>
+            <div class="card"> 
+                <img src="img/quatro em linha.png" alt="Quatro em Linha"> 
+                <h3>Jogo Quatro em Linha</h3> 
+                <p> Implementação do jogo Quatro em Linha com sistema de ranking. </p> 
+                <a href="https://github.com/GSantinho/Quatro_em_Linha" target="_blank">Ver Projeto</a> 
+            </div> 
+        </div> 
     </section>
 
     <!-- CONTACTOS -->
     <section id="contactos">
-        <h2>Entre em Contacto</h2>
+        <h2>Contactos</h2>
 
-        <form>
-            <input type="text" placeholder="Nome" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Mensagem" required></textarea>
-            <button type="submit">Submeter</button>
-        </form>
+        <div class="contactos-cards">
+
+            <!-- INSTAGRAM -->
+            <div class="contacto-card">
+                <div class="icone">
+                    <img src="img/instagram.png" alt="Instagram">
+                </div>
+                <h3>Instagram</h3>
+                <a href="https://www.instagram.com/gustav0santos08/?next=%2Fgustav0santos08" target="_blank">Ver Instagram</a>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="contacto-card">
+                <div class="icone">
+                    <img src="img/gmail.png" alt="Email">
+                </div>
+                <h3>Email</h3>
+                <a href="https://mail.google.com/mail/?view=cm&to=santosrgustavo@gmail.com">Ver Email</a>
+            </div>
+
+            <!-- TELEMÓVEL -->
+            <div class="contacto-card">
+                <div class="icone">
+                    <img src="img/phone_icone.png" alt="Telemóvel">
+                </div>
+                <h3>Telemóvel</h3>
+                <p>+351 936320413</p>
+            </div>
+
+        </div>
     </section>
 
     <!-- FOOTER -->
@@ -92,8 +105,30 @@
         <p>© 2025 Gustavo Santos</p>
     </footer>
 
-    <!-- SCRIPT PARA TROCAR O TEMA -->
-    <script src="theme.js"></script>
+    <!-- SCRIPT MODO CLARO / ESCURO -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const botao = document.getElementById("theme-toggle");
+            const body = document.body;
+
+            if (localStorage.getItem("tema") === "escuro") {
+                body.classList.add("dark");
+                botao.textContent = "☀️ Modo Claro";
+            }
+
+            botao.addEventListener("click", () => {
+                body.classList.toggle("dark");
+
+                if (body.classList.contains("dark")) {
+                    botao.textContent = "☀️ Modo Claro";
+                    localStorage.setItem("tema", "escuro");
+                } else {
+                    botao.textContent = "🌙 Modo Escuro";
+                    localStorage.setItem("tema", "claro");
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
